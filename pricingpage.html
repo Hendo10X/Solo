@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muchtalent - Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation styles from previous code */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+            background-color: white;
+        }
+
+        .logo {
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .pricing-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .pricing-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px 0 80px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #FF6B00;
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #FF6B00;
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(45deg);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #FF6B00;
+            font-weight: bold;
+        }
+
+        .select-plan {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 30px;
+            background: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .select-plan:hover {
+            background: #FF6B00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        .pricing-card.popular .select-plan {
+            background: #FF6B00;
+        }
+
+        .pricing-card.popular .select-plan:hover {
+            background: #ff8533;
+        }
+
+        .save-tag {
+            display: inline-block;
+            background: #e6f7ed;
+            color: #0d894f;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .pricing-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pricing-card {
+                padding: 30px;
+            }
+
+            .logo {
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <img src="/Multitalent logo.svg" alt="Muchtalent Logo" class="logo">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="pricing-header">
+            <h1>Simple, transparent pricing</h1>
+            <p>Choose the perfect plan for your talent acquisition needs. No hidden fees, no surprises.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">Starter</div>
+                <div class="plan-price">$29<span>/month</span></div>
+                <div class="save-tag">Save 20% yearly</div>
+                <ul class="features-list">
+                    <li>Up to 50 candidate profiles</li>
+                    <li>Basic search filters</li>
+                    <li>Email support</li>
+                    <li>Export to CSV</li>
+                    <li>1 team member</li>
+                </ul>
+                <a href="#select-starter" class="select-plan">Get Started</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <div class="popular-tag">Most Popular</div>
+                <div class="plan-name">Professional</div>
+                <div class="plan-price">$99<span>/month</span></div>
+                <div class="save-tag">Save 25% yearly</div>
+                <ul class="features-list">
+                    <li>Up to 500 candidate profiles</li>
+                    <li>Advanced search filters</li>
+                    <li>Priority support</li>
+                    <li>Custom exports</li>
+                    <li>Up to 5 team members</li>
+                    <li>Analytics dashboard</li>
+                    <li>API access</li>
+                </ul>
+                <a href="#select-pro" class="select-plan">Get Started</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">Custom<span>/month</span></div>
+                <ul class="features-list">
+                    <li>Unlimited candidate profiles</li>
+                    <li>Custom features</li>
+                    <li>24/7 priority support</li>
+                    <li>Dedicated account manager</li>
+                    <li>Unlimited team members</li>
+                    <li>Advanced analytics</li>
+                    <li>Custom integrations</li>
+                    <li>SLA guarantee</li>
+                </ul>
+                <a href="#contact-sales" class="select-plan">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
