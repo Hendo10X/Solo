@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muchtalent - Find the Best People</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-login {
+            color: #333;
+        }
+
+        .btn-signup {
+            background: #000;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+            gap: 60px;
+            padding: 40px 0;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 400px;
+            height: 500px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: #FF6B00;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .view-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+                width: 100%;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="/Multitalent logo.svg" alt="Muchtalent Logo" height="30">
+            <div class="nav-links">
+                <a href="#updates">Updates</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#features">Features</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="#login" class="btn btn-login">Log in</a>
+                <a href="#signup" class="btn btn-signup">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Find the best people for the <span class="highlight">best job</span></h1>
+                <p class="hero-text">No more fumbling for business cards or searching for lost contacts after an event.
+                    Muchtalent makes it easy to exchange info and keep the conversation going straight from your inbox.
+                </p>
+                <a href="#demo" class="view-demo">
+                    ▶ View demo
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="/Multitalent.png" alt="Professional using Muchtalent">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
