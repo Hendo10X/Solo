@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates - Muchtalent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation styles from original */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+        }
+
+        .logo {
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FF6B00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B00;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login {
+            color: #333;
+        }
+
+        .btn-login:hover {
+            color: #FF6B00;
+            transform: translateY(-2px);
+        }
+
+        .btn-signup {
+            background: #000;
+            color: white;
+        }
+
+        .btn-signup:hover {
+            background: #FF6B00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        /* Updates specific styles */
+        .updates-header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(to right, #fff5eb, #fff);
+        }
+
+        .updates-header h1 {
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .updates-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .update-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .update-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .update-date {
+            color: #FF6B00;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .update-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .update-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .update-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: #fff5eb;
+            color: #FF6B00;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .updates-header {
+                padding: 40px 0;
+            }
+
+            .updates-header h1 {
+                font-size: 2rem;
+            }
+
+            .updates-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 0;
+            }
+
+            nav>.nav-links,
+            nav>.auth-buttons {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="/Multitalent logo.svg" alt="Muchtalent Logo" class="logo">
+            <div class="nav-links">
+                <a href="/updates.html">Updates</a>
+                <a href="/pricingpage.html">Pricing</a>
+                <a href="/features.html">Features</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="#login" class="btn btn-login">Log in</a>
+                <a href="#signup" class="btn btn-signup">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="updates-header">
+            <h1>Latest Updates</h1>
+            <p>Stay informed about the latest features, improvements, and news from Muchtalent.</p>
+        </div>
+
+        <div class="updates-grid">
+            <div class="update-card">
+                <div class="update-date">December 2, 2024</div>
+                <h2 class="update-title">Enhanced Search Capabilities</h2>
+                <p class="update-description">We've improved our search algorithm to help you find the right talent
+                    faster. New filters and advanced search parameters are now available.</p>
+                <span class="update-tag">Feature Update</span>
+            </div>
+
+            <div class="update-card">
+                <div class="update-date">November 28, 2024</div>
+                <h2 class="update-title">Mobile App Launch</h2>
+                <p class="update-description">Muchtalent is now available on iOS and Android. Connect with professionals
+                    on the go and never miss an opportunity.</p>
+                <span class="update-tag">New Release</span>
+            </div>
+
+            <div class="update-card">
+                <div class="update-date">November 15, 2024</div>
+                <h2 class="update-title">Integration Updates</h2>
+                <p class="update-description">New integrations with popular CRM platforms and calendar apps are now
+                    live. Streamline your workflow with automated synchronization.</p>
+                <span class="update-tag">Integration</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

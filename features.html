@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Muchtalent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation (same as original) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+        }
+
+        .logo {
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FF6B00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B00;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login {
+            color: #333;
+        }
+
+        .btn-signup {
+            background: #000;
+            color: white;
+        }
+
+        .btn-signup:hover {
+            background: #FF6B00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        /* Features specific styles */
+        .features-header {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff5eb 0%, #fff 100%);
+        }
+
+        .features-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .features-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(255, 107, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #fff5eb;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            color: #FF6B00;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .feature-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .learn-more {
+            color: #FF6B00;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .features-header {
+                padding: 60px 0;
+            }
+
+            .features-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 0;
+            }
+
+            nav>.nav-links,
+            nav>.auth-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="/Multitalent logo.svg" alt="Muchtalent Logo" class="logo">
+            <div class="nav-links">
+                <a href="/updates.html">Updates</a>
+                <a href="/pricingpage.html">Pricing</a>
+                <a href="/features.html">Features</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="#login" class="btn btn-login">Log in</a>
+                <a href="#signup" class="btn btn-signup">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="features-header">
+            <h1>Powerful Features for<br>Professional Networking</h1>
+            <p>Discover tools designed to make talent discovery and connection easier than ever.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Smart Search</h3>
+                <p class="feature-description">Find the perfect match with our AI-powered search. Filter by skills,
+                    experience, and location.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Network Building</h3>
+                <p class="feature-description">Connect with professionals in your industry. Build and maintain
+                    meaningful relationships.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Profile Management</h3>
+                <p class="feature-description">Create and manage professional profiles. Showcase your skills and
+                    experience effectively.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Event Integration</h3>
+                <p class="feature-description">Seamlessly integrate with your calendar. Schedule meetings and never miss
+                    an opportunity.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Analytics</h3>
+                <p class="feature-description">Track your networking progress. Get insights into your connections and
+                    engagement.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Security</h3>
+                <p class="feature-description">Your data is safe with us. Enterprise-grade security and privacy
+                    controls.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
